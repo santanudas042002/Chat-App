@@ -1,16 +1,25 @@
-# chatapp
 
-A new Flutter project.
+Title
+Flutter Chat App (Light/Dark + Tabs)
 
-## Getting Started
+Description
+A modular Flutter chat UI that walks users through onboarding → phone login with OTP (Pinput) → profile setup, then lands on a three‑tab interface (Contacts, Chats, More). The app uses a persistent BottomNavigation with IndexedStack to preserve state and delivers full light/dark theming across screens.
 
-This project is a starting point for a Flutter application.
+Features
+- Adaptive theming with Theme Cubit (flutter_bloc), centralized AppColors, and custom ThemeData for consistent visuals.
+- Three tabs with preserved state: Contacts, Chats, and More, powered by BottomNavigationBar + IndexedStack.
+- Chats screen: story strip, search bar, chat list with unread badge; Contacts screen with avatars and last‑seen; More/Settings with profile card and reusable tiles.
+- Reusable UI kit: CustomText, CustomImage, CustomButton, CustomTextField to keep the design consistent and code DRY.
+- Asset pipeline with Mulish font and images configured via pubspec.yaml.
 
-A few resources to get you started if this is your first Flutter project:
+Project structure
+- lib/domain/constant — AppColors, themes, ThemeCubit/State.
+- lib/repositry/Screen — Feature‑wise screens (onboarding, login, OTP, profile, bottomnav, chats, contacts, more).
+- lib/repositry/Screen/uihelper.dart — Reusable widgets and helpers.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Getting started
+- flutter pub get  
+- flutter run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Tech stack
+- Flutter 3.9, Dart; flutter_bloc, pinput, cupertino_icons; Material theming with centralized color tokens.
